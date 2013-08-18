@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/questions.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <title>Questions</title>
+</head>
+<body>
+<div class="wrapper-all">
+    <div class="container-fluid ">
+        <div class="hero-unit js-header-hello">
+            <h1>Я - разработчик интерфейсов</h1>
+
+            <p>Чтобы попасть в школу разработчиков интерфейсов Яндекса тебе нужно проехать так, чтобы все светофоры
+                показывали зеленый свет. Где-то достаточно простого ответа, где-то нужно потрудиться и написать
+                небольшую программу
+            </p>
+            <p>
+                <a class="btn btn-primary btn-large js-start-quest">
+                    Я - за рулем
+                </a>
+            </p>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="questions-road-wrapper">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content hide">
+        <div class="row-fluid column">
+            <div class="span8 questions-wrapper well well-large column op09 hide">
+                <div id="questions-carousel" class="carousel slide">
+                    <div class="carousel-inner">
+
+                    </div>
+                </div>
+                <div class="question-control-panel">
+                    <div class="road-pointer-direction-wrapper question-control-button">
+                        <div class="road-pointer-text road-pointer-bag " href="#questions-carousel" data-slide="prev">
+                            &lt; Назад
+                        </div>
+                    </div>
+                    <div class="road-pointer-direction-wrapper question-control-button dn js-submit-form"
+                         role="btn" data-toggle="modal" data-target="#last-submit">
+                        <div class="road-pointer-text road-pointer-bag">Готово?</div>
+                    </div>
+                    <div class="road-pointer-direction-wrapper question-control-button" href="#questions-carousel"
+                         data-slide="next">
+                        <div class="road-pointer-text road-pointer-bag">Вперед &gt;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4 well column op09">
+                <div class="error-holder dn">
+                    <div class="error-wrapper">
+                        <div class="error-alert"></div>
+                        <div class="error-alert-message">Error message</div>
+                    </div>
+                </div>
+                <div class="success-holder dn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer">
+        <div class="span12">
+            <div class="panel-body">
+                <div class="road-pointer-direction-wrapper dn js-number-of-questions-wrapper">
+                    <div class="road-pointer-direction-text road-pointer-bag js-number-of-questions"></div>
+                </div>
+                <div class="speed-limit road-pointer-bag">Не спешите</div>
+                <div class="attention road-pointer-bag">Будьте вниметельны</div>
+            </div>
+        </div>
+    </div>
+    <div id="last-submit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Еще пара вопросов</h3>
+        </div>
+        <div class="modal-body">
+            <form>
+                <fieldset>
+                    <legend>Расскажите нам о себе</legend>
+                    <label>Ссылка на резюме</label>
+                    <input id="cv-link" type="text">
+                    <label>Ссылка на профиль в Моем Круге</label>
+                    <input id="mk-link" type="text">
+                    <label>Имя, Фамилия</label>
+                    <input id="name-lname" type="text">
+                    <label>Телефон</label>
+                    <input id="tel-nmr" type="text">
+                    <span class="help-block">Пожалуйста, укажите код города</span>
+                    <label>E-mail</label>
+                    <input id="email" type="text">
+                    <label>Дополнительные сведения</label>
+                    <textarea id="additional"> </textarea>
+                    <label>Откуда вы узнали о нашем предложении?</label>
+                    <select>
+                        <option>от HR-менеджера Яндекса</option>
+                        <option>Я.Субботник</option>
+                        <option>Yet another Conference</option>
+                        <option>на другой конференции</option>
+                        <option>из поиска</option>
+                        <option>другое</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">перепроверить</button>
+            <button class="btn btn-primary">Отправить</button>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
